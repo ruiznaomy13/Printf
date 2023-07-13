@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put_unint.c                                     :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ncastell <ncastell@student.42barcel>       +#+  +:+       +#+        */
+/*   By: ncastell <ncastell@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/28 14:00:21 by ncastell          #+#    #+#             */
-/*   Updated: 2023/01/28 20:34:31 by ncastell         ###   ########.fr       */
+/*   Created: 2022/09/23 17:36:21 by ncastell          #+#    #+#             */
+/*   Updated: 2023/07/13 13:11:31 by ncastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-#include "Libft/libft.h"
+#include "libft.h"
 
-int	ft_put_unint(unsigned int num)
+char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
-	char	*number;
 
-	number = ft_itoa(num);
 	i = 0;
-	while(number[i]){
-		write (1, &number[i], 1);
+	while (s[i])
 		i++;
+	while (i >= 0)
+	{
+		if (s[i] == (char)c)
+			return ((char *)(s + i));
+		i--;
 	}
-	return (i);
+	return (NULL);
 }

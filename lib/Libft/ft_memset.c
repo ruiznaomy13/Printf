@@ -1,15 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put_hex.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncastell <ncastell@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/28 12:30:55 by ncastell          #+#    #+#             */
-/*   Updated: 2023/01/28 13:26:05 by ncastell         ###   ########.fr       */
+/*   Created: 2022/09/23 18:03:35 by ncastell          #+#    #+#             */
+/*   Updated: 2023/02/18 12:21:08 by ncastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_put_hex(void *src)
+#include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
 {
+	unsigned char	*ptr;
+
+	ptr = (unsigned char *)s;
+	while (n > 0)
+	{
+		*ptr = (unsigned char)c;
+		n--;
+		ptr++;
+	}
+	return (s);
 }

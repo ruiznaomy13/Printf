@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put_int.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ncastell <ncastell@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/28 13:31:29 by ncastell          #+#    #+#             */
-/*   Updated: 2023/01/28 14:12:53 by ncastell         ###   ########.fr       */
+/*   Created: 2022/09/23 17:26:55 by ncastell          #+#    #+#             */
+/*   Updated: 2022/12/31 13:30:46 by ncastell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-#include "Libft/libft.h"
+#include "libft.h"
 
-int	ft_put_int(int	num)
+char	*ft_strchr(const char *s, int c)
 {
-	int		i;
-	char	*number;
-
-	number = ft_itoa(num);
-	i = 0;
-	while (number[i]){
-		write (1, &number[i], 1);
-			i++;
+	while (*s != (char)c)
+	{
+		if (!*s)
+			return (NULL);
+		s++;
 	}
-	return (i);
+	return ((char *)s);
 }
