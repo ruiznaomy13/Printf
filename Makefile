@@ -6,7 +6,7 @@
 #    By: ncastell <ncastell@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/03 19:16:59 by ncastell          #+#    #+#              #
-#    Updated: 2023/07/13 13:07:49 by ncastell         ###   ########.fr        #
+#    Updated: 2023/12/07 16:53:29 by ncastell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,7 @@ OBJ_DIR	= obj/
 LIB_DIR = lib/Libft/
 LIB		= $(LIB_DIR)libft.a
 
-SRC 	= src/ft_printf.c src/ft_put_char.c src/ft_put_str.c \
-		src/ft_put_nums.c src/ft_put_hex.c src/ft_put_pointer.c
+SRC 	= src/ft_printf.c src/ft_format.c
 
 RM 		= rm -rf
 MP		= mkdir -p
